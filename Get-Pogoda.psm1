@@ -17,7 +17,7 @@ Wykonuje zapytanie webrequest. przy pomocy "curl"
 function Get-Pogoda($city, $country){
 
     function dejMjetoPogode([string]$a,[string]$b) {
-    $invoke = (Invoke-WebRequest http://wttr.in/"$a,$b" -UserAgent "curl" )
+    $invoke = (Invoke-WebRequest http://wttr.in/"$a,$b&lang=pl" -UserAgent "curl" )
     return $invoke.Content
     }
 
